@@ -16,3 +16,6 @@ Nothing special.
 ## LINK
 
 [LUDOT.ME](https://LUDOT.ME)
+
+## TEST
+[Automatic Dark Mode TEST] (https://LUDOT.ME/DK)
