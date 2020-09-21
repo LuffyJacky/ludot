@@ -18,4 +18,4 @@ Nothing special.
 [LUDOT.ME](https://LUDOT.ME)
 
 ## TEST
-[Automatic Dark Mode TEST] (https://LUDOT.ME/DK)
+[Automatic Dark Mode TEST](https://LUDOT.ME/DK)
