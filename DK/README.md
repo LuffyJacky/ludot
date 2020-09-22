@@ -1,2 +1,0 @@
-# ludot
-mY wEbsiTe
