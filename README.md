@@ -10,7 +10,7 @@
 
 ## Features
 
-Automatic Dark Mode TEST
+Automatic Dark Mode TEST (not working on Microsoft Edge now)
 
 
 
