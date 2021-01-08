@@ -86,5 +86,41 @@
 }
 
 
+@keyframes shake-opacity {
+  10% {
+    transform: translate(1px, -1px) rotate(1.5deg);
+    opacity: 0.95; }
+  20% {
+    transform: translate(-3px, 0px) rotate(-1.5deg);
+    opacity: 0.25; }
+  30% {
+    transform: translate(0px, 1px) rotate(1.5deg);
+    opacity: 0.55; }
+  40% {
+    transform: translate(3px, 5px) rotate(0.5deg);
+    opacity: 0.2; }
+  50% {
+    transform: translate(-2px, -2px) rotate(0.5deg);
+    opacity: 0.44; }
+  60% {
+    transform: translate(1px, -3px) rotate(-1.5deg);
+    opacity: 0.78; }
+  70% {
+    transform: translate(0px, -4px) rotate(-0.5deg);
+    opacity: 0.62; }
+  80% {
+    transform: translate(5px, 2px) rotate(-1.5deg);
+    opacity: 0.03; }
+  90% {
+    transform: translate(-1px, -2px) rotate(2.5deg);
+    opacity: 0.17; }
+  0%, 100% {
+    transform: translate(0, 0) rotate(0); } }
+	
+.shake-opacity:hover{
+  animation-name: shake-opacity;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; }
 
 
