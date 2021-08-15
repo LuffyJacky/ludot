@@ -29,7 +29,7 @@
     }
 
     .img3{
-        width: 10%;
+        width: 1000%;
 
     }
     
@@ -52,23 +52,34 @@
  }
 
  @media all and (min-width: 480px) and (max-width: 759px) {
+
+    .midbody{
+        display: block;
+        justify-content: center;
+    }
     .img2{
-        width: 30%;
+        width: 20%;
     }
 
     .img3{
-        width: 30%;
+        width: 90%;
 
     }
  }
 
  @media all and (max-width: 480px) {
+
+    
+    .midbody{
+        display: block;
+        justify-content: center;
+    }
     .img2{
-        width: 50%;
+        width: 20%;
     }
 
     .img3{
-        width: 50%;
+        width: 90%;
 
     }
  }
