@@ -2,14 +2,16 @@
 
 
     header{
-        height:250px;
+        height: 150px;
         width: auto;
     }
 
     footer{
-        
-        height: 100px;
+        height: 150px;
         width: auto;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
     }
 
 	body {
@@ -18,23 +20,57 @@
 
 
     .midbody{
-        
-        height: 250px;
-
-
-        width: auto;
         display: flex;
         justify-content: center;
-
     }
 
     .img2{
-        margin-top: 50px;
-        width: 15%;
+        width: 10%;
     }
 
     .img3{
-        text-align: center;
+        width: 10%;
+
     }
     
     
+
+
+@media all and (min-width: 960px) {
+
+  }
+ 
+ @media all and (min-width: 760px) and (max-width: 959px) {
+    .img2{
+        width: 20%;
+    }
+
+    .img3{
+        width: 20%;
+
+    }
+ }
+
+ @media all and (min-width: 480px) and (max-width: 759px) {
+    .img2{
+        width: 30%;
+    }
+
+    .img3{
+        width: 30%;
+
+    }
+ }
+
+ @media all and (max-width: 480px) {
+    .img2{
+        width: 50%;
+    }
+
+    .img3{
+        width: 50%;
+
+    }
+ }
+
+
