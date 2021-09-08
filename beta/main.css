@@ -10,8 +10,7 @@
         width:100%;
         margin-left: auto;
         margin-right: auto;
-
-        
+        display: inline-block;
     }
 
 	body {
@@ -23,22 +22,26 @@
         width:100%;
         margin-left: auto;
         margin-right: auto;
-
         text-align: center;
     }
 
     .img2{
         display: inline-block;
-
     }
 
-    .img3{
+    .img2H{
+        height: 75px;
         width: 100%;
         text-align: center;
     }
 
-    @
-
+    .img3{
+        display: inline-block;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
     
 
 
