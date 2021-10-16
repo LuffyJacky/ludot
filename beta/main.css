@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-
+@media (prefers-color-scheme: dark) {
     header{
         height: 150px;
         width: auto;
@@ -17,7 +17,6 @@
         background-color:  #1D1E23;
         margin: 5px;
 	}
-
 
     .midbody{
         width:100%;
@@ -43,8 +42,51 @@
         margin-right: auto;
         text-align: center;
     }
-    
+}
 
+@media (prefers-color-scheme: light) {
+    header{
+        height: 150px;
+        width: auto;
+    }
+
+    footer{
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+    }
+
+	body {
+        background-color:  #F5F5F5;
+        margin: 5px;
+	}
+
+    .midbody{
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .img2{
+        display: inline-block;
+    }
+
+    .img2H{
+        height: 75px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .img3{
+        display: inline-block;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
 
 
 
