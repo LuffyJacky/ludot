@@ -82,8 +82,11 @@
     <img class="btn btn-lg " id="image2" src="" />
     <img class="btn btn-lg " id="image3" src="" />
     <a class="btn btn-lg btn-primary w-100" onclick="show()"  id="btnID" role="button"> 獲得祝福 &raquo;</a>
-    <a class="btn btn-lg btn-primary w-100" onclick="show2()" style="display:none;" id="btnID2" role="button"> 獲得後一次祝福 &raquo;</a>
+    <a class="btn btn-lg btn-primary w-100" onclick="show2()" style="display:none;" id="btnID2" role="button"> 獲得再一次祝福 &raquo;</a>
     <a class="btn btn-lg btn-primary w-100" onclick="show3()" style="display:none;" id="btnID3" role="button"> 持續聆聽祝福 &raquo;</a>
+    <a class="btn btn-lg btn-primary w-100" onclick="p()" style="display:none;" id="btnIDB" role="button"> 點此搭配音樂祝福 &raquo;</a>
+    <a class="btn btn-lg btn-primary w-100" onclick="p2()" style="display:none;" id="btnIDB2" role="button"> 音樂閉嘴 &raquo;</a>
+
 
 
   </div>
@@ -91,7 +94,15 @@
 </main>
 
 <audio src="happyhappy.mp3" id="myAudio"></audio>
+<audio src="bgm.mp3" id="myAudio2"></audio>
 <script>
+  function p() {
+    document.getElementById("myAudio2").play();
+  }
+  function p2() {
+    document.getElementById("myAudio2").pause();
+  }
+  
   function show() {
 
     /* Get image and change value
@@ -103,6 +114,10 @@
          .style.display = "none";
          document.getElementById("btnID2")
          .style.display = "";
+         document.getElementById("btnIDB")
+     .style.display = "";
+     document.getElementById("btnIDB2")
+     .style.display = "";
 
     document.getElementById("myAudio").play();
 
@@ -127,6 +142,7 @@ document.getElementById("btnID")
      .style.display = "none";
      document.getElementById("btnID3")
      .style.display = "";
+
 
 document.getElementById("myAudio").play();
               
