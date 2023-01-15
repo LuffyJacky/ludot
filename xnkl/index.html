@@ -79,7 +79,13 @@
     <h1 class="mt-5">新年快樂!</h1>
     <p class="lead">妹渴死在線為您祝福</p>
     <img class="btn btn-lg " id="image" src="img/1.gif" />
+    <img class="btn btn-lg " id="image2" src="" />
+    <img class="btn btn-lg " id="image3" src="" />
     <a class="btn btn-lg btn-primary w-100" onclick="show()"  id="btnID" role="button"> 獲得祝福 &raquo;</a>
+    <a class="btn btn-lg btn-primary w-100" onclick="show2()" style="display:none;" id="btnID2" role="button"> 獲得後一次祝福 &raquo;</a>
+    <a class="btn btn-lg btn-primary w-100" onclick="show3()" style="display:none;" id="btnID3" role="button"> 持續聆聽祝福 &raquo;</a>
+
+
   </div>
 
 </main>
@@ -91,15 +97,63 @@
     /* Get image and change value
     of src attribute */
     let image = document.getElementById("image");
-
     image.src = "img/fum.gif"
 
     document.getElementById("btnID")
-        .style.display = "none";
-        document.getElementById("myAudio").play();
+         .style.display = "none";
+         document.getElementById("btnID2")
+         .style.display = "";
 
+    document.getElementById("myAudio").play();
+
+    let image2 = document.getElementById("image2");
+    image2.src = ""
                   
   }
+
+function show2() {
+
+
+let image = document.getElementById("image");
+image.src = ""
+let image2 = document.getElementById("image2");
+image2.src = "img/2.gif"
+let image3 = document.getElementById("image3");
+image3.src = ""
+
+document.getElementById("btnID")
+     .style.display = "none";
+     document.getElementById("btnID2")
+     .style.display = "none";
+     document.getElementById("btnID3")
+     .style.display = "";
+
+document.getElementById("myAudio").play();
+              
+}
+
+function show3() {
+
+
+document.getElementById("btnID")
+     .style.display = "none";
+     document.getElementById("btnID2")
+     .style.display = "none";
+     document.getElementById("btnID3")
+     .style.display = "";
+
+document.getElementById("myAudio").play();
+
+let image = document.getElementById("image");
+image.src = "img/fum.gif"
+let image2 = document.getElementById("image2");
+image2.src = "img/2.gif"
+let image3 = document.getElementById("image3");
+image3.src = "img/3.gif"
+              
+}
+
+
 </script>
 <!-- 
 <footer class="footer mt-auto py-3 bg-light">
