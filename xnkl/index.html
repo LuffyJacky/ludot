@@ -1,14 +1,11 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="zh-tw" class="h-100">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>妹渴死在線為您祝福</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer/">
 
-    
-
-    
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -72,29 +69,50 @@
   <body class="d-flex flex-column h-100">
     
 <!-- Begin page content -->
-
-
 <main class="flex-shrink-0">
   <div class="container">
+  
+
+
+
+
+<div class="row">
+  <div class="col">
+  </div>
+  <div class="col">
     <h1 class="mt-5">新年快樂!</h1>
     <p class="lead">妹渴死在線為您祝福</p>
-    <img class="btn btn-lg " id="image" src="img/1.gif" />
-    <img class="btn btn-lg " id="image2" src="" />
-    <img class="btn btn-lg " id="image3" src="" />
+    <img class=" rounded" id="image" src="img/1.gif" />
+    <p> </p>
+    <img class=" rounded" id="image2" src="" />
+    <p> </p>
+    <img class=" rounded" id="image3" src="" />
+    <p> </p>
+
+    <div class="d-grid gap-3">
     <a class="btn btn-lg btn-primary w-100" onclick="show()"  id="btnID" role="button"> 獲得祝福 &raquo;</a>
     <a class="btn btn-lg btn-primary w-100" onclick="show2()" style="display:none;" id="btnID2" role="button"> 獲得再一次祝福 &raquo;</a>
     <a class="btn btn-lg btn-primary w-100" onclick="show3()" style="display:none;" id="btnID3" role="button"> 持續聆聽祝福 &raquo;</a>
     <a class="btn btn-lg btn-primary w-100" onclick="p()" style="display:none;" id="btnIDB" role="button"> 點此搭配音樂祝福 &raquo;</a>
     <a class="btn btn-lg btn-primary w-100" onclick="p2()" style="display:none;" id="btnIDB2" role="button"> 音樂閉嘴 &raquo;</a>
+  </div>
+
 
 
 
   </div>
-
+  <div class="col">
+  </div>
+</div>
+</div>
+    
+  </div>
 </main>
 
 <audio src="happyhappy.mp3" id="myAudio"></audio>
 <audio src="bgm.mp3" id="myAudio2"></audio>
+
+
 <script>
   function p() {
     document.getElementById("myAudio2").play();
@@ -128,7 +146,6 @@
 
 function show2() {
 
-
 let image = document.getElementById("image");
 image.src = ""
 let image2 = document.getElementById("image2");
@@ -150,7 +167,6 @@ document.getElementById("myAudio").play();
 
 function show3() {
 
-
 document.getElementById("btnID")
      .style.display = "none";
      document.getElementById("btnID2")
@@ -171,11 +187,12 @@ image3.src = "img/3.gif"
 
 
 </script>
-<!-- 
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted">Place sticky footer content here.</span>
-  </div>
-</footer> -->
+
+
+
+
+
+
+    
   </body>
 </html>
