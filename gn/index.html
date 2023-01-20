@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>妹渴死在線為您祝福</title>
+    <title>晚安!</title>
     <link rel="icon" href="favicon.ico">
 
 
@@ -110,7 +110,7 @@
 </main>
 
 <audio src="zijan.mp3" id="myAudio"></audio>
-<audio src="bgm.mp3" id="myAudio2"></audio>
+<audio src="sweetdream1.mp3" id="myAudio2"></audio>
 
 
 <script>
@@ -138,6 +138,7 @@
      .style.display = "";
 
     document.getElementById("myAudio").play();
+    document.getElementById("myAudio2").play();
 
     let image2 = document.getElementById("image2");
     image2.src = ""
@@ -146,22 +147,21 @@
 
 function show2() {
 
-let image = document.getElementById("image");
-image.src = ""
-let image2 = document.getElementById("image2");
-image2.src = "img/2.gif"
-let image3 = document.getElementById("image3");
-image3.src = ""
-
-document.getElementById("btnID")
+  document.getElementById("btnID")
      .style.display = "none";
      document.getElementById("btnID2")
      .style.display = "none";
      document.getElementById("btnID3")
      .style.display = "";
 
-
 document.getElementById("myAudio").play();
+
+let image = document.getElementById("image");
+image.src = "img/fum.gif"
+let image2 = document.getElementById("image2");
+image2.src = "img/2.gif"
+let image3 = document.getElementById("image3");
+image3.src = "img/3.gif"
               
 }
 
