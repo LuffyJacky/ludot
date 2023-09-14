@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="Sample.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta http-equiv="refresh" content="20">
+
+</head>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100vh; /* 使页面占满整个视口高度 */
+  }
+
+  .fontt {
+    color: #508372;
+    font-size: 3rem;
+    line-height: 1;
+	
+	   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 10s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 10s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 10s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+   0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+	
+}
+
+
+    .logo{
+        max-width: 650px;
+      height: 1080px;
+      margin: 0 auto; 
+      padding: 20px;
+    
+    }
+    .boxx {
+
+      width: 650px;
+      height: 50px;
+
+}
+
+    .box {
+ 
+      width: 650px;
+      height: 1080px;
+      margin: 0 auto; 
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background-image: url('https://cdn.discordapp.com/attachments/396293429790769152/1151834923498491914/BG720.jpg');
+  
+    }
+
+    @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+    body{
+     font-family: 'Noto Sans TC', sans-serif;
+    }
+    .box2 {
+        position: static;
+    }
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    p {
+      font-size: 40px;
+      color: #333;
+      text-align: center;
+    }
+  </style>
+
+<body>
+    <div class="box">
+        
+    
+        <img width="500" src="https://cdn.discordapp.com/attachments/396293429790769152/1151889084403417269/LOGO2.png" style="display:block; margin:auto;" /> 
+        <p class="boxx"></p>
+
+        <h3 style="display:none">取得憑證資料:</h3>
+        <div style="display:none" id="accesstoken" class="align-text-bottom">        
+        </div>
+
+            <div class="box2">
+                
+            <h2 align="right">車還有多久到呢?</h2>
+
+            <div class="fontt"style="font-size:85px" align="right" id="apireponse3" class="align-text-bottom">        
+            </div>
+
+            <p class="boxx"></p>
+
+            <h4 align="right">要來ㄉ車ㄉ車牌:</h4>
+            <div align="right" id="apireponse4" class="align-text-bottom">        
+            </div>
+            <!-- <a class="btn btn-lg btn-primary w-auto position-absolute top-100 start-50 translate-middle" onclick="show()"  id="btnID" role="button"> 重新整理 &raquo;</a> -->
+
+            <p class="boxx"></p>
+            <p class="boxx"></p>
+            <p class="boxx"></p>
+            <p class="boxx"></p>
+            <p class="boxx"></p>
+            <p class="boxx"></p>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" onclick="show()"  id="btnID" role="button"> 重新整理 &raquo;</button>
+            </div>
+            </div>
+    </div>
+
+    <script>
+        function show() {
+            location.reload();
+        }
+    </script>
+<!-- 12
+    <script>
+        var arr1 = []
+
+        $.ajax({ 
+            method:'GET',
+            url: 'https://tdx.transportdata.tw/api/basic/v2/Bus/EstimatedTimeOfArrival/City/Taichung/35?%24filter=%28RouteUID%20eq%20%27TXG35%27%29%20and%20%28StopUID%20eq%20%27TXG18878%27%29&%24top=30&%24format=JSON',             
+            // headers: {
+            //     "authorization": "Bearer " + accesstoken.access_token,                
+            //   },            
+            // async: false,
+            success: function (Data1) {
+                arr1 = Data1
+                console.log(arr1)
+            }
+        })
+
+        	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].first_name}</td>
+							<td>${data[i].last_name}</td>
+							<td>${data[i].email}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+    </script>
+    34 -->
+</body>
+</html>
