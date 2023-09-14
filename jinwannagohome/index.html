@@ -133,9 +133,10 @@ body {
 <body>
     <div class="box">
         
-    
+      <p class="boxx"></p>
+
         <img width="500" src="https://cdn.discordapp.com/attachments/396293429790769152/1151889084403417269/LOGO2.png" style="display:block; margin:auto;" /> 
-        <p class="boxx"></p>
+        
 
         <h3 style="display:none">取得憑證資料:</h3>
         <div style="display:none" id="accesstoken" class="align-text-bottom">        
@@ -173,39 +174,5 @@ body {
             location.reload();
         }
     </script>
-<!-- 12
-    <script>
-        var arr1 = []
-
-        $.ajax({ 
-            method:'GET',
-            url: 'https://tdx.transportdata.tw/api/basic/v2/Bus/EstimatedTimeOfArrival/City/Taichung/35?%24filter=%28RouteUID%20eq%20%27TXG35%27%29%20and%20%28StopUID%20eq%20%27TXG18878%27%29&%24top=30&%24format=JSON',             
-            // headers: {
-            //     "authorization": "Bearer " + accesstoken.access_token,                
-            //   },            
-            // async: false,
-            success: function (Data1) {
-                arr1 = Data1
-                console.log(arr1)
-            }
-        })
-
-        	function buildTable(data){
-		var table = document.getElementById('myTable')
-
-		for (var i = 0; i < data.length; i++){
-			var row = `<tr>
-							<td>${data[i].first_name}</td>
-							<td>${data[i].last_name}</td>
-							<td>${data[i].email}</td>
-					  </tr>`
-			table.innerHTML += row
-
-
-		}
-	}
-
-    </script>
-    34 -->
 </body>
 </html>
