@@ -55,7 +55,7 @@ function GetApiResponse(){
                 for(let i=0;i<arr1.length;i++){
                     let arr2=arr1[i];
                     console.log(arr2)
-                    if(arr2.StopStatus != 3){
+                    if(arr2.StopStatus != 3 && undefined){
                         console.log(arr2.EstimateTime);
                         console.log(arr2.PlateNumb);
                         $('#apireponse3').text(arr2.EstimateTime / '60'+'分鐘ㄛ');
