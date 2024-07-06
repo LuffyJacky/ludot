@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --bg-image-opacity: 0.2; /* 控制背景图片的透明度 */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1D1E23;
+        --text-color: #f0f0f0;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+/* 新增：半透明背景图片层 */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/img0004.jpg'); /* 替换为您的背景图片路径 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: var(--bg-image-opacity);
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 75px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.icon img {
+    width: 150px;
+    height: auto;
+}
+
+.logo {
+    margin-top: 75px;
+}
+
+.logo img {
+    max-width: 300px;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .social-icons {
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .icon img {
+        width: 100px;
+    }
+
+    .logo {
+        margin-top: 50px;
+    }
+
+    .logo img {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .social-icons {
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .icon img {
+        width: 80px;
+    }
+
+    .logo {
+        margin-top: 40px;
+    }
+
+    .logo img {
+        max-width: 200px;
+    }
+}
